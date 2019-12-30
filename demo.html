@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+    </head>
+    <body>
+
+    </body>
+</html>
+<script type="text/javascript">
+    document.write("Hello World<br>");
+    // document.write("Hii");
+    // alert("Hii Javascript");
+    var aa = "ssu";
+    var str1= "suraj";
+    var str2 = "Boreakar"
+    document.write(str1+str2+"<br>")
+    var a = 1;
+    var b = 2;
+    var c = 3;
+    if(a>b && a>c)
+    {
+        // alert("a is greater than b,c");
+    }
+    else if(b>a && b>c)
+    {
+        // alert("b is greater")
+    }
+    else{
+        // alert("c is greater")
+    }
+    // alert(aa);
+    for(var i=1;i<=10;i++)
+    {
+        // for(var j=1;j<=5;j++)
+        // {
+            // document.write(i+"<br>")
+        // }
+    }
+    var k=10;
+    while(k>0)
+    {
+        document.write(k);
+        k=k-1;
+    }
+    var ch="a";
+    var ch = "b";
+    switch(ch)
+    {
+        case "a":alert("a");
+                break;
+        case "b":alert("b");
+                break;
+        default:alert("error");
+                 break;
+    }
+    function add(kk,jj)
+    {
+        document.write("<br>"+(kk+jj))
+    }
+    var zz;
+    add(1,2);
+    // document.write("<br>"+zz);
+    ary = [1,2,3,4]
+    // var Book={
+    //     name:"R.D.Shrma",
+    //     price:350,
+    //     serialNo :12345,
+
+    //     Display:function()
+    //     {
+    //         document.write("<br>Name of Book: "+Book.name);
+    //         document.write("<br>Price: "+Book.price);
+    //         document.write("<br>Serial No: "+Book.serialNo);
+    //     }
+
+    // }
+    // // Book.Display()
+    // Book.price = 400;
+    // Book.Display();
+    function Book(name,price,serialNo)
+    {
+        this.name = name
+        this.price = price
+        this.serialNo = serialNo
+        this.display=function()
+        {
+             document.write("<br>Name of Book: "+name);
+             document.write("<br>Price: "+price);
+             document.write("<br>Serial No: "+serialNo);
+        }
+    }
+
+    var b1 = new Book("math2",800,1234);
+    
+    var b2 = new Book("math3",200,5678);
+    
+    b1.price = 800;
+    b1.display();
+    b2.display();
+</script>
