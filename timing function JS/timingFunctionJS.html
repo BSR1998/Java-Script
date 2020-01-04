@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timing Function</title>
+    </head>
+    <script type="text/javascript">
+        
+        var id=0;
+        var id1=0;
+        var count=0;
+        function start()
+        {
+            id=window.setTimeout(printMsg,5000);
+        }
+        function printMsg()
+        {
+            document.getElementById("header1").innerHTML = "5 second completed";
+        }
+        function end()
+        {
+            window.clearTimeout(id)
+        }
+        function startInterval()
+        {
+           id1 =  window.setInterval(intervalMsg,1000)
+        }
+        function intervalMsg()
+        {
+            document.getElementById("head2").innerHTML = "Second: "+count;
+            count++   
+        }
+        function endInterval()
+        {
+            window.clearInterval(id1)
+        }
+    </script> 
+    <body>
+     <button type="button" onclick="start();">Start</button>
+    <h1 id="header1" > Start</h1>
+    <button type="button" onclick="end()">End</button>   
+    <!-- you can stop method  -->
+    <br><br>
+    <button type="button" onclick="startInterval();">start interval</button>
+    <h1 id="head2">Second</h1>
+    <button type="button" onclick="endInterval();">end interval</button>
+</body>
+</html>
