@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submit Form  </title>
+        
+    </head>
+    <body>
+        <form action="action.html" onsubmit=" return abc()">
+            <input type="text" placeholder="Enter Username" id="user"><br><br>
+            <input type="password" placeholder="Enter Password" id="pass"><br><br>
+            <button type="submit">Submit</button>  
+        </form>
+    </body>
+</html>
+<script>
+        function abc()
+        {
+            var user = document.getElementById("user")
+            var psw = document.getElementById("pass")
+            if(user.value.trim()=="" || psw.value.trim()=="")
+            {
+                alert("Invalid")
+                return false
+            }
+            else
+            {
+                true
+            }
+        }
+</script>
