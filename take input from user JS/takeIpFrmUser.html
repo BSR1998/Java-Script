@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Taking User From User</title>
+        <script type="text/javascript">
+        function takeByTag()
+        {
+            var arry = document.getElementsByTagName("h4")
+            for(var v=0;v<arry.length;v++)
+            {
+                arry[v].style.color="green"
+            }
+        }
+        function takeByClass()
+        {
+            var tt= document.getElementsByClassName("class1")
+            for(var v =0; v<tt.length; v++)
+            { 
+                tt[v].style.color = "red"
+
+            }
+        }
+        function takeInput()
+        {
+            var str = document.getElementById("user").value;
+            var str1 = document.getElementById("psw").value;
+            alert(str)
+            alert(str1)
+        }      
+        function takeRadio()
+        {
+            var str = document.getElementById("rd1")
+            var str1 = document.getElementById("rd2")
+            if(str.checked==true)
+            {
+                alert("checked value is : "+str.value)
+            }
+            else if(str1.checked==true)
+                alert("checked value is : "+str1.value)
+        }
+        function takeSelect()
+        {
+            var selec = document.getElementById("sell")
+            alert(selec.option[select.selectedIndex].value)
+        }
+        </script>            
+    </head>
+    <body>
+    <input type="text" placeholder="Enter Name" id="user"><br>
+    <br>
+    <input type="password" placeholder="Enter Paswword" id="psw">
+    <br><br>
+    <button onclick="takeInput()" id="btn">Login</button>
+    </body>
+    <br><br><br>
+
+    <input type="radio" id="rd1" name="grp1" value="Suraj">Suraj</input>
+    <br><br>
+    <input type="radio" id="rd2" name="grp1" value="Borekar">Borekar</input>
+    <br><br>
+    <button onclick="takeRadio()" style="width: 100px; height: 50px; color: red;" >Radio</button>
+    <br><br><br>
+    <select id="sell" style="width: 100px; text-align-last: center; border-width: 2px; border-color: blueviolet;">
+        <option value="male">male</option>
+        <option value="female">female</option>
+        <option value="other">other</option>
+    </select>
+    <br><br>
+    <button onclick="takeSelect()" style="width: 100px;">select radio</button>
+
+    <br><br><br>
+    <h1 class="class1">HII</h1>
+    <h2 class="class1">HEllo</h2>
+
+    <a href="https://www.youtube.com/watch?v=uDwSnnhl1Ng&list=PLsyeobzWxl7qtP8Lo9TReqUMkiOp446cV" class="class1">Clieck me</a>
+    <br><br><br>
+    <button onclick="takeByClass()" style="width: 100px; height: 30px;">take By class</button>
+
+    <h4>h4</h4>
+    <h4>h4</h4>
+    <h4>h4</h4>
+    <h4>h4</h4>
+    <br>
+    <button onclick="takeByTag()" style="width: 100px;height: 30px;">takeByTag</button>
+</html>
