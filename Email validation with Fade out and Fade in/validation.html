@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Validation</title></head>
+    <script>
+        function validate()
+        {
+            var str = document.getElementById("txt1")
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+)(.[a-z]{3,10})$/;
+            if(regx.test(str.value))
+            {
+                document.getElementById("lbl").style.visibility = "visible";
+                document.getElementById("lbl").style.color = "green";
+                return true
+                
+            }
+            else
+            {
+                document.getElementById("lbl").style.visibility = "visible";
+                document.getElementById("lbl").style.color = "red";
+                document.getElementById("lbl").innerHTML = "Invalid";
+                str.style.border = "solid 3px red";
+                return false
+            } 
+        }
+    </script>
+    <body>
+      <form onsubmit="return validate()" action="fade.html">
+            <input id="txt1" type="text" placeholder="Enter EmailID">
+            <br>
+            <label id="lbl" style="color: green; visibility: hidden;">Valid</label>
+            <br><br>
+            
+            <br>
+            <button type="submit">Log In</button>
+      </form>
+    </body>
+</html>
